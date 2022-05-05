@@ -44,8 +44,8 @@ No. of records with **missing data - 364832**
 - OOPS with Flake 8 formatting convention
 
 ## Pending Items
-- Total no. of rows mismatch, validation required to identify missing chunk
-- Reduce insertion time to less than 2 minutes
+- Total no. of rows mismatch, validation required to identify missing chunk - split files in smaller chunks and validate each of 12 chunks used in my case
+- Reduce insertion time to less than 2 minutes, try another DB
 
 ## Improvements
 - Creating DockerFile for single step deployment
@@ -53,3 +53,6 @@ No. of records with **missing data - 364832**
 - Clean single quotes, double quotes for description
 - Test with bigger files to test scaling
 - Test cases for validation of records
+
+## References 
+- https://nurdabolatov.com/parallel-processing-large-file-in-python
