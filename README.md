@@ -27,25 +27,29 @@ Two tables needs to be created in mysql with below scripts
 mysql connector for python is required to run script. Use - pip install mysql-connector-python
 
 ## Results
-No. of records inserted in **catalog table - 466693**
-No. of records with **missing data - 364832**
+- No. of records created (insert + update) in **catalog table - 466693**
+- No. of records with **missing data - 364832**
 
 ![Catalog Sample Data](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/catalog_sample.png)
+
 ![Rows with missing data](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/catalog_with_missing_data.png)
-**DB insert with parallel processing completed in approx 2.5 minutes** on Mac Pro, 16 GB RAM
+
+**DB insert with parallel processing < 100 seconds ** on Mac Pro, 16 GB RAM, 12 Cores
+![Runtime](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/runtime.png)
 
 
 **Aggregate query with no. of rows with same name**
 ![Aggregate Query](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/count_by_name.png)
+
 ## Points Achieved
 - Non blocking parallel ingestion
 - update existing product in catalog, based on sku during insert
 - ingestion in single table
+- Runtime < 2 mins
 - OOPS with Flake 8 formatting convention
 
 ## Pending Items
-- Total no. of rows mismatch, validation required to identify missing chunk - split files in smaller chunks and validate each of 12 chunks used in my case
-- Reduce insertion time to less than 2 minutes, try another DB
+- Better aggregation query, try mongoDB
 
 ## Improvements
 - Creating DockerFile for single step deployment
