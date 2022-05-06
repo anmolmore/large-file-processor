@@ -1,6 +1,29 @@
 # Zluri Assignment - Large file processor
 
-## Steps to run
+## Choice of DB :
+MongoDB would be ideal choice here, for faster writes with bulk_write APIs available. Solution uploaded is for mysql.
+For MongoDB, just a quick manual steps were used
+
+## Steps to run (Mongo)
+
+Catalog collection is created
+> use zluri
+
+create catalog collection
+> db.createCollection("catalog")
+
+create unique index of SKU
+> db.catalog.createIndex( { sku: 1 }, { unique: true } )
+
+Run bulk upload using Mongo Compass, directly uploading whole CSV in less than 30 seconds on Mac Pro, 16 GB
+
+Run aggregate query
+> db.catalog.aggregate([{"$group":{_id:"$name",count:{$sum:1}}},{$sort:{count:-1}}])
+
+Screenshots in mongo folder
+
+
+## Steps to run (MySQL)
 
 ### Step 1 : Create required DB tables
 Two tables needs to be created in mysql with below scripts
