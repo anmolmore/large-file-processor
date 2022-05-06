@@ -72,11 +72,11 @@ mysql connector for python is required to run script. Use - pip install mysql-co
 - OOPS with Flake 8 formatting convention
 
 ## Pending Items
-- Better aggregation query, try mongoDB
+- None
 
 ## Improvements
 - Creating DockerFile for single step deployment
-- Handle records with missing data - rows with missing description can be inserted in catalog table
+- Handle records with missing data - rows with missing description can be inserted in catalog table based on inference of separation by dash (-) for sku
 - Clean single quotes, double quotes for description
 - Test with bigger files to test scaling
 - Test cases for validation of records
