@@ -34,7 +34,7 @@ mysql connector for python is required to run script. Use - pip install mysql-co
 
 ![Rows with missing data](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/catalog_with_missing_data.png)
 
-**DB insert with parallel processing < 100 seconds ** on Mac Pro, 16 GB RAM, 12 Cores
+**DB insert with parallel processing < 100 seconds** on Mac Pro, 16 GB RAM, 12 Cores
 ![Runtime](https://github.com/anmolmore/zluri_data_engineer/blob/main/results/runtime.png)
 
 
