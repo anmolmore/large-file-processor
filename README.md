@@ -83,3 +83,5 @@ mysql connector for python is required to run script. Use - pip install mysql-co
 
 ## References 
 - https://nurdabolatov.com/parallel-processing-large-file-in-python
+- https://stackoverflow.com/questions/291740/how-do-i-split-a-huge-text-file-in-python
+- https://stackoverflow.com/questions/16289859/splitting-large-text-file-into-smaller-text-files-by-line-numbers-using-python
